@@ -12,46 +12,68 @@
     </header>
 
     <main>
+        <!-- Lista de Livros (Ao clicar, rola direto para o formulário lá embaixo) -->
         <nav class="livro">
             <a href="#form">
-                <img src="/img/pc.jpg" alt="">
-                <h3><b>Principe Cruel</b> - Holly Black-disponivel: Sim</h3>
+                <img src="/img/pc.jpg" alt="Capa Príncipe Cruel">
+                <h3><b>Príncipe Cruel</b> - Holly Black - Disponível: Sim</h3>
             </a>
+        </nav>
         
         <nav class="livro">
             <a href="#form">
-                <img src="/img/rp.jpg" alt="">
-                <h3><b>Rei Perverso</b> - Holly Black- disponivel:Sim</h3>
+                <img src="/img/rp.jpg" alt="Capa Rei Perverso">
+                <h3><b>Rei Perverso</b> - Holly Black - Disponível: Sim</h3>
             </a>
         </nav>
+
         <nav class="livro">
             <a href="#form">
-                <img src="/img/rdn.jpg" alt="">
-                <h3><b>Rainha do Nada</b> - Holly Black- disponivel: Não</h3>
+                <img src="/img/rdn.jpg" alt="Capa Rainha do Nada">
+                <h3><b>Rainha do Nada</b> - Holly Black - Disponível: Não</h3>
             </a>
         </nav>
+
         <nav class="livro">
             <a href="#form">
-                <img src="/img/tihe.jpg" alt="">
-                <h3><b>Tithe</b> -Holly Black - diponivel:Sim</h3>
+                <img src="/img/tihe.jpg" alt="Capa Tithe">
+                <h3><b>Tithe</b> - Holly Black - Disponível: Sim</h3>
             </a>
         </nav>
+
         <nav class="livro">
             <a href="#form">
-                <img src="/img/valiant.jpg" alt="">
-                <h3><b>Valiant</b> - HOlly Black - Sim</h3>
+                <img src="/img/valiant.jpg" alt="Capa Valiant">
+                <h3><b>Valiant</b> - Holly Black - Disponível: Sim</h3>
             </a>
         </nav>
+
         <nav class="livro">
             <a href="#form">
-                <img src="/img/rdf.jpg" alt="">
-                <h3><b>Reino de Ferro</b> - Holly Black - Não</h3>
+                <img src="/img/rdf.jpg" alt="Capa Reino de Ferro">
+                <h3><b>Reino de Ferro</b> - Holly Black - Disponível: Não</h3>
             </a>
         </nav>
-        <form id="form" action="#" method="POST">
-            <input type="text" placeholder="Nome" required>
-            <input type="text" placeholder="Turma" required>
-            <input type="text" placeholder="Livro" required>
+
+        <!-- Formulário (O action manda direto para a página de sucesso) -->
+        <form id="form" action="sucesso.html">
+            <h2>Pedir Empréstimo</h2>
+            
+            <div class="campo">
+                <label for="nome">Nome do Aluno <span class="marcador">*</span></label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="turma">Turma <span class="marcador">*</span></label>
+                <input type="text" id="turma" placeholder="Digite sua turma" required>
+            </div>
+
+            <div class="campo">
+                <label for="livro">Livro Escolhido <span class="marcador">*</span></label>
+                <input type="text" id="livro" placeholder="Nome do livro" required>
+            </div>
+
             <button type="submit">PEDIR</button>
         </form>
 
