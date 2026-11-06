@@ -1,0 +1,5 @@
+function enviarPedido(event) {
+    event.preventDefault(); // Impede a página de recarregar do nada
+    alert("Pedido enviado com sucesso! 🎉"); // Abre um aviso na tela
+    window.location.href = "sucesso.html"; // Redireciona para a página de sucesso
+}
