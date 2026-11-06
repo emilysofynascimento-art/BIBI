@@ -1,87 +1,117 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Biblioteca</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* { 
+    box-sizing: border-box; 
+    font-family: sans-serif; 
+}
 
-    <header>
-        <h1>BIBLIOTECA</h1>
-    </header>
+body { 
+    margin: 0; 
+    background: #fff0f5; 
+    color: #4a001f; 
+}
 
-    <main>
-        <!-- Lista de Livros (Ao clicar, rola direto para o formulário lá embaixo) -->
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/pc.jpg" alt="Capa Príncipe Cruel">
-                <h3><b>Príncipe Cruel</b> - Holly Black - Disponível: Sim</h3>
-            </a>
-        </nav>
-        
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/rp.jpg" alt="Capa Rei Perverso">
-                <h3><b>Rei Perverso</b> - Holly Black - Disponível: Sim</h3>
-            </a>
-        </nav>
+header { 
+    background: #ff69b4; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+}
 
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/rdn.jpg" alt="Capa Rainha do Nada">
-                <h3><b>Rainha do Nada</b> - Holly Black - Disponível: Não</h3>
-            </a>
-        </nav>
+/* Adaptável para PC e Celular: O max-width garante que ele não passe de 500px em telas grandes, 
+   mas o width: 90% faz ele encolher certinho em celulares menores */
+main { 
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px; 
+}
 
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/tihe.jpg" alt="Capa Tithe">
-                <h3><b>Tithe</b> - Holly Black - Disponível: Sim</h3>
-            </a>
-        </nav>
+.livro { 
+    background: #ffb6c1;
+    margin: 8px 0; 
+    padding: 8px;
+    border-radius: 5px; 
+}
 
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/valiant.jpg" alt="Capa Valiant">
-                <h3><b>Valiant</b> - Holly Black - Disponível: Sim</h3>
-            </a>
-        </nav>
+.livro a { 
+    display: flex;
+    align-items: center;
+    color: #4a001f;
+    text-decoration: none;
+    gap: 15px; 
+}
 
-        <nav class="livro">
-            <a href="#form">
-                <img src="/img/rdf.jpg" alt="Capa Reino de Ferro">
-                <h3><b>Reino de Ferro</b> - Holly Black - Disponível: Não</h3>
-            </a>
-        </nav>
+.livro a:hover { 
+    background: #ffc0cb; 
+}
 
-        <!-- Formulário (O action manda direto para a página de sucesso) -->
-        <form id="form" action="sucesso.html">
-            <h2>Pedir Empréstimo</h2>
-            
-            <div class="campo">
-                <label for="nome">Nome do Aluno <span class="marcador">*</span></label>
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
-            </div>
+h3 {
+    font-size: 1rem;
+    margin: 0;
+}
 
-            <div class="campo">
-                <label for="turma">Turma <span class="marcador">*</span></label>
-                <input type="text" id="turma" placeholder="Digite sua turma" required>
-            </div>
+img { 
+    width: 45px; 
+    height: 60px; 
+    object-fit: cover;
+    background: #ffc0cb;
+    border: 1px solid #ff69b4; 
+}
 
-            <div class="campo">
-                <label for="livro">Livro Escolhido <span class="marcador">*</span></label>
-                <input type="text" id="livro" placeholder="Nome do livro" required>
-            </div>
+/* Estilo do Formulário e Rótulos */
+form { 
+    background: #ffc0cb; 
+    padding: 15px; 
+    margin-top: 30px; 
+    border-radius: 5px; 
+}
 
-            <button type="submit">PEDIR</button>
-        </form>
+form h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
-    </main>
+.campo {
+    margin-bottom: 12px;
+}
 
-    <footer>
-        <p>emy sofy e aninha fazendeira</p>
-    </footer>
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
 
-</body>
-</html>
+.marcador {
+    color: #ff1493;
+}
+
+input { 
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ff69b4; 
+    border-radius: 3px; 
+}
+
+button { 
+    width: 100%; 
+    background: #ff69b4; 
+    color: white; 
+    padding: 10px; 
+    border: none; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+button:hover { 
+    background: #ff1493; 
+}
+
+footer { 
+    background: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; 
+}
