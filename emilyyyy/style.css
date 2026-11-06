@@ -1,36 +1,87 @@
-* { box-sizing: border-box; font-family: sans-serif; }
-body { margin: 0; background: #fff0f5; color: #4a001f; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-header { background: #ff69b4; color: white; text-align: center; padding: 10px; }
-main { max-width: 500px;
-    margin: 20px auto;
-    padding: 10px; }
+    <header>
+        <h1>BIBLIOTECA</h1>
+    </header>
 
-.livro { background: #ffb6c1;
-    margin: 8px 0; padding: 8px;
-    border-radius: 5px; }
-.livro a { display: flex;
-    align-items: center;
-    color: #4a001f;
-    text-decoration: none;
-    gap: 15px; }
-.livro a:hover { background: #ffc0cb; }
+    <main>
+        <!-- Lista de Livros (Ao clicar, rola direto para o formulário lá embaixo) -->
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/pc.jpg" alt="Capa Príncipe Cruel">
+                <h3><b>Príncipe Cruel</b> - Holly Black - Disponível: Sim</h3>
+            </a>
+        </nav>
+        
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/rp.jpg" alt="Capa Rei Perverso">
+                <h3><b>Rei Perverso</b> - Holly Black - Disponível: Sim</h3>
+            </a>
+        </nav>
 
-img { 
-    width: 45px; 
-    height: 60px; 
-    object-fit: cover;
-    background: #ffc0cb;
-    border: 1px solid #ff69b4; 
-}
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/rdn.jpg" alt="Capa Rainha do Nada">
+                <h3><b>Rainha do Nada</b> - Holly Black - Disponível: Não</h3>
+            </a>
+        </nav>
 
-form { background: #ffc0cb; padding: 15px; margin-top: 30px; border-radius: 5px; }
-input { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ff69b4; border-radius: 3px; }
-button { width: 100%; background: #ff69b4; color: white; padding: 10px; border: none; font-weight: bold; cursor: pointer; }
-button:hover { background: #ff1493; }
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/tihe.jpg" alt="Capa Tithe">
+                <h3><b>Tithe</b> - Holly Black - Disponível: Sim</h3>
+            </a>
+        </nav>
 
-footer { background: #ff69b4;
-color: white;
-text-align: center;
-padding: 10px;
-margin-top: 20px; }
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/valiant.jpg" alt="Capa Valiant">
+                <h3><b>Valiant</b> - Holly Black - Disponível: Sim</h3>
+            </a>
+        </nav>
+
+        <nav class="livro">
+            <a href="#form">
+                <img src="/img/rdf.jpg" alt="Capa Reino de Ferro">
+                <h3><b>Reino de Ferro</b> - Holly Black - Disponível: Não</h3>
+            </a>
+        </nav>
+
+        <!-- Formulário (O action manda direto para a página de sucesso) -->
+        <form id="form" action="sucesso.html">
+            <h2>Pedir Empréstimo</h2>
+            
+            <div class="campo">
+                <label for="nome">Nome do Aluno <span class="marcador">*</span></label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="turma">Turma <span class="marcador">*</span></label>
+                <input type="text" id="turma" placeholder="Digite sua turma" required>
+            </div>
+
+            <div class="campo">
+                <label for="livro">Livro Escolhido <span class="marcador">*</span></label>
+                <input type="text" id="livro" placeholder="Nome do livro" required>
+            </div>
+
+            <button type="submit">PEDIR</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>emy sofy e aninha fazendeira</p>
+    </footer>
+
+</body>
+</html>
